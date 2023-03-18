@@ -116,3 +116,4 @@ class TestGoogleSheet:
             "tempo de preparo": "60",
             "custo compras": "0",
         }
+        assert 1 == 1
