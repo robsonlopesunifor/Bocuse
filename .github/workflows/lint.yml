@@ -13,6 +13,7 @@ jobs:
     steps:
       - name: 🍽️ Get working copy
         uses: actions/checkout@v1
+        run: echo "${{ secrets.ENV_FILE }}" > .env
         with:
           fetch-depth: 1
       - name: 🛠 Build project
