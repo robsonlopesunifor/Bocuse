@@ -2,19 +2,45 @@ version: "3.7"
 networks:
   back:
 
+x-build: &default-build
+  context: .
+  dockerfile: Dockerfile
+
 services:
-  fast_api:
-    build:
-      dockerfile: ./docker/dockerfile
-      context: .
-    command: uvicorn source.main:source --host 0.0.0.0 --port 8000
+  app:
+    build: *default-build
+    command: uvicorn source.main:app --host 0.0.0.0 --port 8000
     volumes:
-      - ./source:/source
+      - .:/app
     env_file:
-      - .env
+      - ./envs/.env
     environment:
       - DEBUG=True
     ports:
       - 8000:8000
     networks:
       - back
+
+  lint:
+    container_name: lola-lint
+    build: *default-build
+    working_dir: /app
+    volumes:
+      - .:/app
+    networks:
+      - back
+    command: ["./scripts/start-lint.sh"]
+
+  tests:
+    container_name: lola-tests
+    image: python:3.10-slim-bullseye
+    env_file: ./envs/.env
+    working_dir: /app
+    volumes:
+      - .:/app
+    depends_on:
+      - app
+    command: ["./scripts/start-tests.sh"]
+
+networks:
+  back:

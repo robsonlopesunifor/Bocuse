@@ -1,0 +1,18 @@
+# Ignore
+Dockerfile
+poetry.lock
+pyproject.toml
+docker-compose.yml
+requirements.txt
+docker
+.pytest_cache
+.env
+.gitignore
+source
+.git
+README.md
+
+# Don't ignore
+!poetry.lock
+!pyproject.toml
+!README.md
