@@ -16,8 +16,8 @@ jobs:
         with:
           fetch-depth: 1
       - name: 'Create env file'
-        run: | 
-          echo "${{ secrets.ENV_FILE }}" > envs/.env
+        run: |
+          echo "${{ secrets.ENV_FILE }}" > .env
       - name: 🛠 Build project
         run: docker-compose build --no-cache tests
       - name: 🚀 Tests
