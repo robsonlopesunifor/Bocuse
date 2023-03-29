@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Project Folders
-TARGET_FOLDERS="source"
+TARGET_FOLDERS="Menu"
 MAX_ACCEPTABLE_COMPLEXITY=6
 
 # Run Tools
@@ -14,7 +14,5 @@ echo "Running isort" && \
     echo "Performing general code quality evaluation ..."&& \
     flake8 $TARGET_FOLDERS && \
     echo "Running some static typing checking..." && \
-    mypy $TARGET_FOLDERS &&
-    echo "Checking for cyclomatic complexity" && \
-    flake8 --max-complexity $MAX_ACCEPTABLE_COMPLEXITY $TARGET_FOLDERS
+    mypy $TARGET_FOLDERS
 

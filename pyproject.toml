@@ -16,6 +16,7 @@ google-auth-oauthlib = "^1.0.0"
 pandas = "^1.5.3"
 requests = "^2.28.2"
 dockerignore-generate = "^1.0.7"
+pydantic = "^1.10.7"
 
 
 [tool.poetry.group.dev.dependencies]
@@ -26,20 +27,18 @@ flake8 = "^6.0.0"
 mypy = "^1.1.1"
 isort = "^5.12.0"
 pycodestyle = "^2.10.0"
+pactman = "^2.30.0"
+vcrpy = "^4.2.1"
 
 
 [tool.isort]
 force_single_line = true
 line_length = 120
 skip_glob = "**/migrations/*.py"
-use_parentheses = true
-multi_line_output = 5
-include_trailing_comma = true
 lines_between_types = 1
-known_django = "django"
-known_mais_todos = "mais_todos"
-known_third_party = ["urllib3", "rest_framework", "request_id_django_log", "pytest"]
-sections = ["FUTURE", "STDLIB", "DJANGO", "THIRDPARTY", "FIRSTPARTY", "LOCALFOLDER", "MAIS_TODOS"]
+known_fastapi = "fastapi"
+known_third_party = ["urllib3", "pytest"]
+sections = ["FUTURE", "STDLIB", "FASTAPI", "THIRDPARTY", "FIRSTPARTY", "LOCALFOLDER"]
 
 
 [tool.black]

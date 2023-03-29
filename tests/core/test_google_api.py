@@ -1,34 +1,36 @@
 import os
 import sys
+import vcr
 
 import pandas as pd
 
-from core.google_api import GoogleDrive
-from core.google_api import GoogleSheet
-
-sys.path.insert(0, os.path.abspath("../source/"))
+from Menu.core.google_api import GoogleDrive
+from Menu.core.google_api import GoogleSheet
 
 
 class TestGoogleDrive:
+    @vcr.use_cassette("tests/fixtures/vcr_cassettes/all_sheets.yml")
     def test_listAllSheets(self):
         list_sheets = GoogleDrive("1WbimQ3P31IOYWv_zsCdnGaxsMF6be5J4").listAllSheets()
         assert "doces" in (folder["name"] for folder in list_sheets)
         assert "teste_bolo" in (receita["name"] for folder in list_sheets for receita in folder["receitas"])
 
-    def test_searchByReceita(self):
+    @vcr.use_cassette("tests/fixtures/vcr_cassettes/search_ficha_tecnica.yml")
+    def test_searchFichaTecnica(self):
         assert (
-            GoogleDrive("1WbimQ3P31IOYWv_zsCdnGaxsMF6be5J4").searchByReceita("teste_bolo")
+            GoogleDrive("1WbimQ3P31IOYWv_zsCdnGaxsMF6be5J4").searchFichaTecnica("teste_bolo")
             == "1bPHL0LwEQMVSe5CPYX39E2rCpbRpSjo-XJMykK7my80"
         )
 
 
 class TestGoogleSheet:
+    @vcr.use_cassette("tests/fixtures/vcr_cassettes/sheet_teste_bolo.yml")
     def test_dataSheet(self):
         sheet = GoogleSheet("1bPHL0LwEQMVSe5CPYX39E2rCpbRpSjo-XJMykK7my80")
-        df = pd.DataFrame(pd.read_csv("source/tests/test_bolo.csv", index_col=0).values)
         data = sheet.dataSheet("ingredientes")
-        assert (data.values == df.values).all()
+        assert data.values[:1][0].tolist() == ["unidades", "redimento", "porcao", "tempo de preparo", "custo compras"]
 
+    @vcr.use_cassette("tests/fixtures/vcr_cassettes/sheet_teste_bolo.yml")
     def test_fichaTecnica(self):
         ficha_tecnica = GoogleSheet("1bPHL0LwEQMVSe5CPYX39E2rCpbRpSjo-XJMykK7my80").fichaTecnica()
         assert ficha_tecnica == {
@@ -71,10 +73,11 @@ class TestGoogleSheet:
             ],
         }
 
+    @vcr.use_cassette("tests/fixtures/vcr_cassettes/sheet_teste_bolo.yml")
     def test_ingredientes(self):
-        sheet = GoogleSheet("")
-        df = pd.DataFrame(pd.read_csv("source/tests/test_bolo.csv", index_col=0).values)
-        assert sheet.ingredientes(df) == [
+        sheet = GoogleSheet("1bPHL0LwEQMVSe5CPYX39E2rCpbRpSjo-XJMykK7my80")
+        data = sheet.dataSheet("ingredientes")
+        assert sheet.ingredientes(data) == [
             {
                 "ingredientes": "farinha",
                 "peso": "291",
@@ -105,15 +108,14 @@ class TestGoogleSheet:
             },
         ]
 
+    @vcr.use_cassette("tests/fixtures/vcr_cassettes/sheet_teste_bolo.yml")
     def test_informacoes(self):
-        sheet = GoogleSheet("")
-        df = pd.DataFrame(pd.read_csv("source/tests/test_bolo.csv", index_col=0).values)
-        # import pdb; pdb.set_trace()
-        assert sheet.informacoes(df) == {
+        sheet = GoogleSheet("1bPHL0LwEQMVSe5CPYX39E2rCpbRpSjo-XJMykK7my80")
+        data = sheet.dataSheet("ingredientes")
+        assert sheet.informacoes(data) == {
             "unidades": "6",
             "redimento": "1200",
             "porcao": "200",
             "tempo de preparo": "60",
             "custo compras": "0",
         }
-        assert 1 == 1

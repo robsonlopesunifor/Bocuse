@@ -1,15 +1,13 @@
 version: "3.7"
-networks:
-  back:
 
 x-build: &default-build
   context: .
   dockerfile: Dockerfile
 
 services:
-  app:
+  menu-app:
     build: *default-build
-    command: uvicorn source.main:app --host 0.0.0.0 --port 8000
+    command: uvicorn Menu.main:app --host 0.0.0.0 --port 8000
     volumes:
       - .:/app
     env_file:
@@ -22,7 +20,7 @@ services:
       - back
 
   lint:
-    container_name: lola-lint
+    container_name: menu-lint
     build: *default-build
     working_dir: /app
     volumes:
@@ -32,15 +30,15 @@ services:
     command: ["./scripts/start-lint.sh"]
 
   tests:
-    container_name: lola-tests
-    image: python:3.10-slim-bullseye
+    container_name: menu-tests
+    build: *default-build
     env_file: .env
     working_dir: /app
     volumes:
       - .:/app
-    depends_on:
-      - app
-    command: ["./scripts/start-tests.sh"]
+    command: ["pytest","tests"]
 
 networks:
   back:
+    name: back-menu
+

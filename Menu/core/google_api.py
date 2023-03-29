@@ -18,15 +18,15 @@ folder_menu_id = "1WbimQ3P31IOYWv_zsCdnGaxsMF6be5J4"
 class GoogleApi:
     def credencial(self):
         creds = None
-        if os.path.exists("source/core/token.json"):
-            creds = Credentials.from_authorized_user_file("source/core/token.json", SCOPES)
+        if os.path.exists("Menu/core/token.json"):
+            creds = Credentials.from_authorized_user_file("Menu/core/token.json", SCOPES)
         if not creds or not creds.valid:
             if creds and creds.expired and creds.refresh_token:
                 creds.refresh(Request())
             else:
-                flow = InstalledAppFlow.from_client_secrets_file("source/core/credentials.json", SCOPES)
+                flow = InstalledAppFlow.from_client_secrets_file("Menu/core/credentials.json", SCOPES)
                 creds = flow.run_local_server(port=0)
-            with open("source/core/token.json", "w") as token:
+            with open("Menu/core/token.json", "w") as token:
                 token.write(creds.to_json())
         return creds
 
@@ -35,6 +35,14 @@ class GoogleDrive(GoogleApi):
     def __init__(self, folder_id: str):
         self.service = build("drive", "v3", credentials=self.credencial())
         self.folder_id = folder_id
+
+    def searchFichaTecnica(self, nome_receita: str):
+        menu = self.listAllSheets()
+        for cardapio in menu:
+            for receita in cardapio["receitas"]:
+                if receita["name"] == nome_receita:
+                    return receita["id"]
+        return None
 
     def listAllSheets(self):
         cardapios = self.folderList()
@@ -65,14 +73,6 @@ class GoogleDrive(GoogleApi):
             .execute()
         )
         return results.get("files", [])
-
-    def searchByReceita(self, nome_receita: str):
-        menu = self.listAllSheets()
-        for cardapio in menu:
-            for receita in cardapio["receitas"]:
-                if receita["name"] == nome_receita:
-                    return receita["id"]
-        return None
 
 
 class GoogleSheet(GoogleApi):

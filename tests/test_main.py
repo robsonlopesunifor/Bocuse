@@ -1,15 +1,15 @@
 import os
 import sys
+import vcr
 
 from fastapi.testclient import TestClient
-from main import app
-
-sys.path.insert(0, os.path.abspath("../source/"))
+from Menu.main import app
 
 
 client = TestClient(app)
 
 
+@vcr.use_cassette("tests/fixtures/vcr_cassettes/cardapio.yml")
 def test_cardapios():
     response = client.get("/cardapios/")
     list_sheets = response.json()
@@ -18,8 +18,9 @@ def test_cardapios():
     assert "teste_bolo" in (receita["name"] for folder in list_sheets for receita in folder["receitas"])
 
 
-def test_receita():
-    response = client.get("/receita/teste_cafe")
+@vcr.use_cassette("tests/fixtures/vcr_cassettes/ficha_tecnica_teste_bolo.yml")
+def test_ficha_tecnica():
+    response = client.get("/ficha_tecnica/teste_bolo")
     ficha_tecnica = response.json()
     assert response.status_code == 200
     assert "informacoes" in list(ficha_tecnica.keys())

@@ -1,0 +1,215 @@
+interactions:
+- request:
+    body: null
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate
+      authorization:
+      - Bearer ya29.a0Ael9sCPrPJOpkHYoO9GhcYf5QvY_i-gZwbfjw0mY9FkbkygVgH3AhkKOjqPD-OQeUqk2dzqGa_27RiO3bhcD9nkIY85lraNnGwnL-3DlCT6GToW60Es1JXlOP5RozCyqZoa1d5g2H2SsOKXZCh-_PRHyssxR_r0DHAaCgYKAcISARASFQF4udJhJOispIcbC2fRtkXGdSYgaA0169
+      content-length:
+      - '0'
+      user-agent:
+      - (gzip)
+      x-goog-api-client:
+      - gdcl/2.81.0 gl-python/3.10.10
+    method: GET
+    uri: https://www.googleapis.com/drive/v3/files?q=mimeType%3D%27application%2Fvnd.google-apps.folder%27+and+%271WbimQ3P31IOYWv_zsCdnGaxsMF6be5J4%27+in+parents&pageSize=20&fields=nextPageToken%2C+files%28id%2C+name%29&alt=json
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAC/6vmUlBQSsvMSS1WslKIBnIUFKrBJFA4MwUopmSY41qhm+oWXuCYUeVo5JGf7e8b
+        6JmdHFaVaOGSbuYaVKikA9OQl5ibCtJSnJiTnpiSrwQWr9XBamqEa7xJUXBWpnm2pW5EqqVbcaVR
+        RHa6ZVGBkVmml0WZM6apKfnJQFfiMzMgvrAqzKk41zkz3MM409c4xDgiw920MiM+xaQiMDgCi0uT
+        UpMyUxJhpgLJWK5aLgAeyvvBFAEAAA==
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Tue, 28 Mar 2023 21:50:22 GMT
+      Expires:
+      - Mon, 01 Jan 1990 00:00:00 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - ESF
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin, X-Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-XSS-Protection:
+      - '0'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate
+      authorization:
+      - Bearer ya29.a0Ael9sCPrPJOpkHYoO9GhcYf5QvY_i-gZwbfjw0mY9FkbkygVgH3AhkKOjqPD-OQeUqk2dzqGa_27RiO3bhcD9nkIY85lraNnGwnL-3DlCT6GToW60Es1JXlOP5RozCyqZoa1d5g2H2SsOKXZCh-_PRHyssxR_r0DHAaCgYKAcISARASFQF4udJhJOispIcbC2fRtkXGdSYgaA0169
+      content-length:
+      - '0'
+      user-agent:
+      - (gzip)
+      x-goog-api-client:
+      - gdcl/2.81.0 gl-python/3.10.10
+    method: GET
+    uri: https://www.googleapis.com/drive/v3/files?q=mimeType%3D%27application%2Fvnd.google-apps.spreadsheet%27+and+%271lEx-eFWpAhzA2HokOMQIkcVza8Dg6ERq%27+in+parents&fields=nextPageToken%2C+files%28id%2C+name%29&alt=json
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAC/6vmUlBQSsvMSS1WslKIBnIUFKrBJFA4MwUopmRoGRLpVJxoGZZsVuHoHBrmUWVQ
+        7FecaugYVeltWlHsGlriZBBklOKUYuIUqKQD05uXmJsK0l2SWlySGl+QWVWVqASWqwWSsVy1XAAA
+        HetEeQAAAA==
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Tue, 28 Mar 2023 21:50:23 GMT
+      Expires:
+      - Mon, 01 Jan 1990 00:00:00 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - ESF
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin, X-Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-XSS-Protection:
+      - '0'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate
+      authorization:
+      - Bearer ya29.a0Ael9sCPrPJOpkHYoO9GhcYf5QvY_i-gZwbfjw0mY9FkbkygVgH3AhkKOjqPD-OQeUqk2dzqGa_27RiO3bhcD9nkIY85lraNnGwnL-3DlCT6GToW60Es1JXlOP5RozCyqZoa1d5g2H2SsOKXZCh-_PRHyssxR_r0DHAaCgYKAcISARASFQF4udJhJOispIcbC2fRtkXGdSYgaA0169
+      content-length:
+      - '0'
+      user-agent:
+      - (gzip)
+      x-goog-api-client:
+      - gdcl/2.81.0 gl-python/3.10.10
+    method: GET
+    uri: https://www.googleapis.com/drive/v3/files?q=mimeType%3D%27application%2Fvnd.google-apps.spreadsheet%27+and+%271XE_4rSji7k9-Xe9Fsy2Xkg9rp26iJ8vC%27+in+parents&fields=nextPageToken%2C+files%28id%2C+name%29&alt=json
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAC/6vmUlBQSsvMSS1WslKIBnIUFKrBJFA4MwUopmSYFODhY+BT7hroGxacauocEBlh
+        bOlqVORckBRUEJyVrxvh5VuZ7W2eW2lhoKQD05uXmJsK0l2SWlySGp+Un5OvBJaqBZKxXLVcAKc8
+        Bgt4AAAA
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Tue, 28 Mar 2023 21:50:23 GMT
+      Expires:
+      - Mon, 01 Jan 1990 00:00:00 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - ESF
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin, X-Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-XSS-Protection:
+      - '0'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate
+      authorization:
+      - Bearer ya29.a0Ael9sCPrPJOpkHYoO9GhcYf5QvY_i-gZwbfjw0mY9FkbkygVgH3AhkKOjqPD-OQeUqk2dzqGa_27RiO3bhcD9nkIY85lraNnGwnL-3DlCT6GToW60Es1JXlOP5RozCyqZoa1d5g2H2SsOKXZCh-_PRHyssxR_r0DHAaCgYKAcISARASFQF4udJhJOispIcbC2fRtkXGdSYgaA0169
+      content-length:
+      - '0'
+      user-agent:
+      - (gzip)
+      x-goog-api-client:
+      - gdcl/2.81.0 gl-python/3.10.10
+    method: GET
+    uri: https://www.googleapis.com/drive/v3/files?q=mimeType%3D%27application%2Fvnd.google-apps.spreadsheet%27+and+%271P_qzVBsmCiWH3iM3T3XhG5yh_d4xQSXq%27+in+parents&fields=nextPageToken%2C+files%28id%2C+name%29&alt=json
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAC/6vmUlBQSsvMSS1WslKIBnIUFKrBJFA4MwUopmRYZpRj6ukTHx6VlJsdYZwYVuoZ
+        nlyWEZSTVJBraGKZkRhWmWVu7J+dEWjsqKQD05uXmJsK0l2SWlySGp+cmJaqBJaqBZKxXLVcAMmV
+        CHR4AAAA
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Tue, 28 Mar 2023 21:50:24 GMT
+      Expires:
+      - Mon, 01 Jan 1990 00:00:00 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - ESF
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin, X-Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-XSS-Protection:
+      - '0'
+    status:
+      code: 200
+      message: OK
+version: 1

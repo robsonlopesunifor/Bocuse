@@ -23,8 +23,10 @@ RUN poetry export --with dev -f requirements.txt -o requirements.txt && \
 
 FROM python:3.10-slim
 
-RUN apt-get update \
-    && apt-get install -y postgresql-client
+RUN apt-get update && \
+    apt-get install -y postgresql-client && \
+    apt-get install ruby --no-install-recommends -y && \
+    gem install pact_broker-client
 
 WORKDIR /app
 
