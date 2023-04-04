@@ -1,0 +1,57 @@
+interactions:
+- request:
+    body: null
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate
+      authorization:
+      - Bearer ya29.a0Ael9sCN9iz_RtaeXWB4LjyS7JX2etKze0jSSCDLoxqH4b9MnVXczdUy-LsPyR5Fl_gId5ctjaWkmVjIjw5qyZ9Qkw0KTNBJaSCLMXlYAnoUdk8leeNTrHc0cLOXX4JRVvRpDJ7ZgVcLtr1Pg-f-MYQn5JiaBn9fHowaCgYKAU0SARASFQF4udJhwJrFL5s2zCpQ-CZeQlXr1A0169
+      content-length:
+      - '0'
+      user-agent:
+      - (gzip)
+      x-goog-api-client:
+      - gdcl/2.81.0 gl-python/3.10.10
+    method: GET
+    uri: https://sheets.googleapis.com/v4/spreadsheets/1bPHL0LwEQMVSe5CPYX39E2rCpbRpSjo-XJMykK7my80/values/preparos?alt=json
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAC/51TPU/DMBDd+yuOzEVKN9QNiR0JBiQQw9U5UiPbl/qjC+LXMHTqH+iaP8Y5KRQK
+        aqJKcSTf+b1753t+mwAUHl1NxRyKxlODnsPF9Wz+OCvLspjmvMVX9jfakguaXT54d/tw3+fWaBIF
+        iT3JDvZ/iVPEBrsj3dbqQEAOGoOKii76PP2NOBwWGbhK1G4QGF7YOwaE2VUJtccUBtHslcgkiFxx
+        APm0qz1VmlykI/Qxy1/VMXmEzBNI8WDtHkDHRU+BeREOeGw37U6hB4Jkf1KA0aukK/6f44Rsy2aJ
+        1fnKx+Ir8l5kyKAsClDXmHuQoYeEEHVNBkG8JelenD89mLEDkSLndKnYgkJj95pc+yEWi3qdZUFt
+        2l0kN+xSVpnr0BDYduu0ZWg4hHa7JjOqqc7hQ9VSNgHm1yCis/zva+aUvVJRl5LYEJNiw/K6ukmF
+        IM3vWUdpVbwgn9sd6wcGtWQpibG/ddl7sjI1sTRpCcrjtlp5vmRX4dcAJ3m9Tz4BDtbu/p4EAAA=
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Cache-Control:
+      - private
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Tue, 04 Apr 2023 13:35:12 GMT
+      Server:
+      - ESF
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-XSS-Protection:
+      - '0'
+    status:
+      code: 200
+      message: OK
+version: 1

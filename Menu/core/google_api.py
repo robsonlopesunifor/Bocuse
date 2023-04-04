@@ -81,26 +81,16 @@ class GoogleSheet(GoogleApi):
         self.sheet_id = sheet_id
         self.ficha_tecnica: dict = {}
 
-    def fichaTecnica(self):
-        data_frame = self.dataSheet("ingredientes")
-        self.ficha_tecnica["informacoes"] = self.informacoes(data_frame)
-        self.ficha_tecnica["ingredientes"] = self.ingredientes(data_frame)
-        return self.ficha_tecnica
-
     def dataSheet(self, range: str):
         sheet = self.service.spreadsheets()
         result = sheet.values().get(spreadsheetId=self.sheet_id, range=range).execute()
-        data_frame = pd.DataFrame(result.get("values", []))
-        return data_frame
+        return pd.DataFrame(result.get("values", []))
 
-    def ingredientes(self, data_frame):
-        novas_chaves = data_frame.iloc[2:3, 0:].to_dict("records")
-        novo_df = data_frame.iloc[3:, 0:].rename(columns=novas_chaves[0])
-        ingredientes = novo_df.to_dict("records")
-        return ingredientes
-
-    def informacoes(self, data_frame):
-        novas_chaves = data_frame.iloc[0:1, 0:].to_dict("records")
-        novo_df = data_frame.iloc[1:2, 0:].rename(columns=novas_chaves[0])
-        ingredientes = novo_df.to_dict("records")[0]
-        return ingredientes
+    def binder(self):
+        sheet = self.service.spreadsheets()
+        sheets = sheet.get(spreadsheetId=self.sheet_id).execute()
+        binder = {}
+        for sheet in sheets["sheets"]:
+            title = sheet["properties"]["title"]
+            binder[title] = self.dataSheet(title)
+        return binder

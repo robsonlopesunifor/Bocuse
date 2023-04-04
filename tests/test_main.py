@@ -19,19 +19,11 @@ def test_cardapios():
 
 
 @vcr.use_cassette("tests/fixtures/vcr_cassettes/ficha_tecnica_teste_bolo.yml")
-def test_ficha_tecnica():
+def test_get_ficha_tecnica():
     response = client.get("/ficha_tecnica/teste_bolo")
-    ficha_tecnica = response.json()
     assert response.status_code == 200
-    assert "informacoes" in list(ficha_tecnica.keys())
-    assert "ingredientes" in list(ficha_tecnica.keys())
-    assert "unidades" in list(ficha_tecnica["informacoes"].keys())
-    assert "redimento" in list(ficha_tecnica["informacoes"].keys())
-    assert "porcao" in list(ficha_tecnica["informacoes"].keys())
-    assert "tempo de preparo" in list(ficha_tecnica["informacoes"].keys())
-    assert "custo compras" in list(ficha_tecnica["informacoes"].keys())
-    assert "ingredientes" in list(ficha_tecnica["ingredientes"][0].keys())
-    assert "peso" in list(ficha_tecnica["ingredientes"][0].keys())
-    assert "preco" in list(ficha_tecnica["ingredientes"][0].keys())
-    assert "unidade" in list(ficha_tecnica["ingredientes"][0].keys())
-    assert "custo" in list(ficha_tecnica["ingredientes"][0].keys())
+    
+@vcr.use_cassette("tests/fixtures/vcr_cassettes/ficha_tecnica_teste_bolo_404.yml")
+def test_get_erro_ficha_tecnica():
+    response = client.get("/ficha_tecnica/erro")
+    assert response.status_code == 404
