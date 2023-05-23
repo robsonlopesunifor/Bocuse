@@ -15,35 +15,33 @@ interactions:
       x-goog-api-client:
       - gdcl/2.81.0 gl-python/3.10.10
     method: GET
-    uri: https://www.googleapis.com/drive/v3/files?q=mimeType%3D%27application%2Fvnd.google-apps.folder%27+and+%271WbimQ3P31IOYWv_zsCdnGaxsMF6be5J4%27+in+parents&pageSize=20&fields=nextPageToken%2C+files%28id%2C+name%29&alt=json
+    uri: https://sheets.googleapis.com/v4/spreadsheets/1bPHL0LwEQMVSe5CPYX39E2rCpbRpSjo-XJMykK7my80/values/equipamentos?alt=json
   response:
     body:
       string: !!binary |
-        H4sIAAAAAAAC/6vmUlBQSsvMSS1WslKIBnIUFKrBJFA4MwUopmSY41qhm+oWXuCYUeVo5JGf7e8b
-        6JmdHFaVaOGSbuYaVKikA9OQl5ibCtJSnJiTnpiSrwQWr9XBamqEa7xJUXBWpnm2pW5EqqVbcaVR
-        RHa6ZVGBkVmml0WZM6apKfnJQFfiMzMgvrAqzKk41zkz3MM409c4xDgiw920MiM+xaQiMDgCi0uT
-        UpMyUxJhpgLJWK5aLgAeyvvBFAEAAA==
+        H4sIAAAAAAAC/4WQzwrCMAyH73uK2vOE7epN8C7oQVA81C4bkbXRpBNBfBofxRez8w8orHhoIPm+
+        hh+5ZEppNr4BPVEajh0ejAMfSEbTcrIui6LQee84syeeYWSC5Ht5MV8tX+xk2g4kzjaxU+8a59BC
+        YKrIgQS0JPoJtvmvVRN70vmnLVNWc7/91xxapjH5yshfNwA7UhbZdq2paFhqIDJANolYjALDqMV4
+        zQprtHE5p+KeIYEOTBZE0n93JsB3sqx/1+wBL6rZD9IBAAA=
     headers:
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
       Cache-Control:
-      - no-cache, no-store, max-age=0, must-revalidate
+      - private
       Content-Encoding:
       - gzip
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Tue, 11 Apr 2023 16:10:29 GMT
-      Expires:
-      - Mon, 01 Jan 1990 00:00:00 GMT
-      Pragma:
-      - no-cache
+      - Tue, 11 Apr 2023 16:10:31 GMT
       Server:
       - ESF
       Transfer-Encoding:
       - chunked
       Vary:
-      - Origin, X-Origin
+      - Origin
+      - X-Origin
+      - Referer
       X-Content-Type-Options:
       - nosniff
       X-Frame-Options:
@@ -69,35 +67,35 @@ interactions:
       x-goog-api-client:
       - gdcl/2.81.0 gl-python/3.10.10
     method: GET
-    uri: https://www.googleapis.com/drive/v3/files?q=mimeType%3D%27application%2Fvnd.google-apps.spreadsheet%27+and+%271lEx-eFWpAhzA2HokOMQIkcVza8Dg6ERq%27+in+parents&fields=nextPageToken%2C+files%28id%2C+name%29&alt=json
+    uri: https://sheets.googleapis.com/v4/spreadsheets/1bPHL0LwEQMVSe5CPYX39E2rCpbRpSjo-XJMykK7my80/values/ingredientes?alt=json
   response:
     body:
       string: !!binary |
-        H4sIAAAAAAAC/21Oy26CQBTd8xU3s2YBFjS4E1Jj1PqK2Fcac2FGxMx0JjOYIsav8VP8sQJpV7o5
-        Oeck53G2AMgu58yQPnzWAuDcYm3ntPaIG2VxsX+aDt92L92sp9GfJ6tx58S1+7MVC3YoHcd7nQWH
-        ni+J/Z/9RsGatMAUtb5dJShUCjVlnDNIpQCN2RFowxUClyKRjVJSp5K0LRf74Z1g/R4aDDZptxxE
-        8WZUOWZmmDv4OE380jzHReisOjSkXri8v6PyqsJ2FTkmmhn826rxy7pYv442/C8PAQAA
+        H4sIAAAAAAAC/4VSu04DMRDs8xXm6isSIEhJh0SPBAUSiGLP3rsY+ZGsbYSE+B4qKsQX3I9hh4cd
+        ydEVtryzs6PZ9b7OGGsIzIDNmjXSDIRCovHoTi4X6/vVatW0iaLhydKV1GictCZxb67vbn9yz6AC
+        uog9xIj93iyp9ZY0jO/jV0zv0cf2kEJoRBL1tmn/sK0lDkUcjBQgosI/woOLBVXB5cVp5i3m8xws
+        2zI1r5dvgTxmlrG6iHYBjN97yZiO4xJQF+usKtrogaTZABPIPMmhyJyXNgddF8uMONDAgTJQtPUi
+        Y+aInczqEquzBrxNdtz4KWTpJz+d3U6q9Uj7H2S7MH5oyQuls1KpI9ToJuUcqGprfDPdF8RdUZGX
+        N6Cohx7rAtx2SD5QUceT1zQbhbJciION0mrKEN9YbhV4ZMUe1j57ls7b7Bte1DsxjgMAAA==
     headers:
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
       Cache-Control:
-      - no-cache, no-store, max-age=0, must-revalidate
+      - private
       Content-Encoding:
       - gzip
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Tue, 11 Apr 2023 16:10:29 GMT
-      Expires:
-      - Mon, 01 Jan 1990 00:00:00 GMT
-      Pragma:
-      - no-cache
+      - Tue, 11 Apr 2023 16:10:31 GMT
       Server:
       - ESF
       Transfer-Encoding:
       - chunked
       Vary:
-      - Origin, X-Origin
+      - Origin
+      - X-Origin
+      - Referer
       X-Content-Type-Options:
       - nosniff
       X-Frame-Options:
@@ -123,36 +121,35 @@ interactions:
       x-goog-api-client:
       - gdcl/2.81.0 gl-python/3.10.10
     method: GET
-    uri: https://www.googleapis.com/drive/v3/files?q=mimeType%3D%27application%2Fvnd.google-apps.spreadsheet%27+and+%271XE_4rSji7k9-Xe9Fsy2Xkg9rp26iJ8vC%27+in+parents&fields=nextPageToken%2C+files%28id%2C+name%29&alt=json
+    uri: https://sheets.googleapis.com/v4/spreadsheets/1bPHL0LwEQMVSe5CPYX39E2rCpbRpSjo-XJMykK7my80/values/ingredientes?alt=json
   response:
     body:
       string: !!binary |
-        H4sIAAAAAAAC/32NTW+CQBiE7/yKzZ4lAUWpvVFiUmFJVyQG2jRE9G1cvpayu9qN8b9LTXuy6WWS
-        mcnMczYQwh+sBoEf0dtgEDrfdIjZfsiwXdBnYpHTYhVt1jD1aZZO5otx73dF3K1LbqZBpKvQbfSD
-        hUe/23bbwPdagpCQF7zm+FZdRn8yyFLptvL3h0mmvGnQCTt3wtevT9NhETOT1vUC7ajadUl1z6Db
-        I/z7XioR98lLMl7JvlxubGXXR05nHWuItOaSzdIy9p5yGkJ2/747wEmjHecVA4F+OIO+GxfjCqhg
-        sj0+AQAA
+        H4sIAAAAAAAC/4VSu04DMRDs8xXm6isSIEhJh0SPBAUSiGLP3rsY+ZGsbYSE+B4qKsQX3I9hh4cd
+        ydEVtryzs6PZ9b7OGGsIzIDNmjXSDIRCovHoTi4X6/vVatW0iaLhydKV1GictCZxb67vbn9yz6AC
+        uog9xIj93iyp9ZY0jO/jV0zv0cf2kEJoRBL1tmn/sK0lDkUcjBQgosI/woOLBVXB5cVp5i3m8xws
+        2zI1r5dvgTxmlrG6iHYBjN97yZiO4xJQF+usKtrogaTZABPIPMmhyJyXNgddF8uMONDAgTJQtPUi
+        Y+aInczqEquzBrxNdtz4KWTpJz+d3U6q9Uj7H2S7MH5oyQuls1KpI9ToJuUcqGprfDPdF8RdUZGX
+        N6Cohx7rAtx2SD5QUceT1zQbhbJciION0mrKEN9YbhV4ZMUe1j57ls7b7Bte1DsxjgMAAA==
     headers:
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
       Cache-Control:
-      - no-cache, no-store, max-age=0, must-revalidate
+      - private
       Content-Encoding:
       - gzip
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Tue, 11 Apr 2023 16:10:30 GMT
-      Expires:
-      - Mon, 01 Jan 1990 00:00:00 GMT
-      Pragma:
-      - no-cache
+      - Tue, 11 Apr 2023 16:10:32 GMT
       Server:
       - ESF
       Transfer-Encoding:
       - chunked
       Vary:
-      - Origin, X-Origin
+      - Origin
+      - X-Origin
+      - Referer
       X-Content-Type-Options:
       - nosniff
       X-Frame-Options:
@@ -178,34 +175,33 @@ interactions:
       x-goog-api-client:
       - gdcl/2.81.0 gl-python/3.10.10
     method: GET
-    uri: https://www.googleapis.com/drive/v3/files?q=mimeType%3D%27application%2Fvnd.google-apps.spreadsheet%27+and+%271P_qzVBsmCiWH3iM3T3XhG5yh_d4xQSXq%27+in+parents&fields=nextPageToken%2C+files%28id%2C+name%29&alt=json
+    uri: https://sheets.googleapis.com/v4/spreadsheets/1bPHL0LwEQMVSe5CPYX39E2rCpbRpSjo-XJMykK7my80/values/preparos?alt=json
   response:
     body:
       string: !!binary |
-        H4sIAAAAAAAC/6vmUlBQSsvMSS1WslKIBnIUFKrBJFA4MwUopmRYZpRj6ukTHx6VlJsdYZwYVuoZ
-        nlyWEZSTVJBraGKZkRhWmWVu7J+dEWjsqKQD05uXmJsK0l2SWlySGp+cmJaqBJaqBZKxXLVcAMmV
-        CHR4AAAA
+        H4sIAAAAAAAC/5WPMQvCQAyF9/6KeHOHu026Ce6CDoLiEDXWk/ZSk7aL+N+91i4WRR0SeMn3eMkt
+        ATCCISeTgamEKhTWycxlG2etNWm3L/HCMvclBfUcOnC5WK+euxaLhjTOtlHB0OOcaqywR3pZeq0b
+        QdPrXfrKjjECVlA6sP7BF/7a+OMnC+/1fUoMgR/8o3dQFeXbcQW1BMhwYgkMCG5qIRdsFCoWcOfB
+        n3R1Tx5TSW6ZigEAAA==
     headers:
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
       Cache-Control:
-      - no-cache, no-store, max-age=0, must-revalidate
+      - private
       Content-Encoding:
       - gzip
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Tue, 11 Apr 2023 16:10:30 GMT
-      Expires:
-      - Mon, 01 Jan 1990 00:00:00 GMT
-      Pragma:
-      - no-cache
+      - Tue, 11 Apr 2023 16:10:32 GMT
       Server:
       - ESF
       Transfer-Encoding:
       - chunked
       Vary:
-      - Origin, X-Origin
+      - Origin
+      - X-Origin
+      - Referer
       X-Content-Type-Options:
       - nosniff
       X-Frame-Options:
@@ -229,15 +225,20 @@ interactions:
       user-agent:
       - testclient
     method: GET
-    uri: http://testserver/cardapios/
+    uri: http://testserver/receita/1bPHL0LwEQMVSe5CPYX39E2rCpbRpSjo-XJMykK7my80
   response:
-    content: "[{\"id\":\"1lEx-eFWpAhzA2HokOMQIkcVza8Dg6ERq\",\"name\":\"salgado\",\"receitas\":[{\"id\":\"1CgUth3LFXfM6g7ra5ObRJ2ylr1w_mPejx004WN9j75o\",\"name\":\"macarr\xE3o
-      pappardelle com ragu de copa lombo de porco\"},{\"id\":\"19TYBsa9Vc6xACUVHz0sNse1AZyK5xsEUtB0R2dBd4BQ\",\"name\":\"pizza
-      de calabresa\"}]},{\"id\":\"1XE_4rSji7k9-Xe9Fsy2Xkg9rp26iJ8vC\",\"name\":\"doces\",\"receitas\":[{\"id\":\"1bPHL0LwEQMVSe5CPYX39E2rCpbRpSjo-XJMykK7my80\",\"name\":\"teste_bolo\"},{\"id\":\"1LIuynkCdh3YuA5Jps1_4KZxq-4iMi-Tn7AJy4ul77Lk\",\"name\":\"Pave\"},{\"id\":\"1jusRrTOT2QtrjIV1u1lvoP6pimLt09ti6XjRAB_PKeY\",\"name\":\"chewy
-      cookies \"}]},{\"id\":\"1P_qzVBsmCiWH3iM3T3XhG5yh_d4xQSXq\",\"name\":\"bebidas\",\"receitas\":[{\"id\":\"1v2l5IL_WZbmkX3aVuIWcvhRlbpm149haVyj73OkhQ3A\",\"name\":\"teste_cafe\"}]}]"
+    content: "{\"equipamentos\":[{\"nome\":\"forno\",\"necessario\":true},{\"nome\":\"fog\xE3o\",\"necessario\":true},{\"nome\":\"micro-ondas\",\"necessario\":true},{\"nome\":\"termo
+      circulado\",\"necessario\":false},{\"nome\":\"geladeira\",\"necessario\":false},{\"nome\":\"frise\",\"necessario\":false},{\"nome\":\"liquidificador\",\"necessario\":false},{\"nome\":\"mixer\",\"necessario\":false},{\"nome\":\"processador\",\"necessario\":false},{\"nome\":\"batedeira\",\"necessario\":false}],\"ingredientes\":[{\"etapa\":\"bolo\",\"ingredientes\":[{\"nome\":\"farinha
+      de trigo\",\"quantidade\":\"400\",\"medida\":\"gm\"},{\"nome\":\"a\xE7ucar\",\"quantidade\":\"2\",\"medida\":\"xicara\"},{\"nome\":\"bicarbonato
+      de s\xF3dio\",\"quantidade\":\"4\",\"medida\":\"sopa\"},{\"nome\":\"fermento
+      qu\xEDmico\",\"quantidade\":\"3\",\"medida\":\"sobremesa\"},{\"nome\":\"sal\",\"quantidade\":\"2\",\"medida\":\"cha\"},{\"nome\":\"baunilha\",\"quantidade\":\"1\",\"medida\":\"cafe\"}]},{\"etapa\":\"cobertura\",\"ingredientes\":[{\"nome\":\"creme
+      de leite\",\"quantidade\":\"100\",\"medida\":\"ml\"},{\"nome\":\"chocolate \",\"quantidade\":\"50\",\"medida\":\"gm\"}]}],\"informacoes\":{\"rendimento\":\"562\",\"porcao\":\"100\",\"unidades\":\"5,62\",\"custo\":\"0\"},\"preparos\":[{\"etapa\":\"mistura\",\"passos\":[{\"descricao\":\"misture
+      os secos\",\"tipo\":\"\"},{\"descricao\":\"misture os liquidos\",\"tipo\":\"\"},{\"descricao\":\"misture
+      os scos e os liquidos\",\"tipo\":\"obs\"}]},{\"etapa\":\"assar\",\"passos\":[{\"descricao\":\"leve
+      ao forno a 180 graus por 1h\",\"tipo\":\"\"}]}]}"
     headers:
       content-length:
-      - '711'
+      - '1326'
       content-type:
       - application/json
     http_version: HTTP/1.1

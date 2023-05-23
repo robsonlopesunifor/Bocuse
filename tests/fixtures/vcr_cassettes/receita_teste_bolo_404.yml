@@ -15,16 +15,13 @@ interactions:
       x-goog-api-client:
       - gdcl/2.81.0 gl-python/3.10.10
     method: GET
-    uri: https://sheets.googleapis.com/v4/spreadsheets/1bPHL0LwEQMVSe5CPYX39E2rCpbRpSjo-XJMykK7my80/values/ingredientes?alt=json
+    uri: https://sheets.googleapis.com/v4/spreadsheets/erro/values/equipamentos?alt=json
   response:
     body:
       string: !!binary |
-        H4sIAAAAAAAC/4VSu04DMRDs8xXm6isSIEhJh0SPBAUSiGLP3rsY+ZGsbYSE+B4qKsQX3I9hh4cd
-        ydEVtryzs6PZ9b7OGGsIzIDNmjXSDIRCovHoTi4X6/vVatW0iaLhydKV1GictCZxb67vbn9yz6AC
-        uog9xIj93iyp9ZY0jO/jV0zv0cf2kEJoRBL1tmn/sK0lDkUcjBQgosI/woOLBVXB5cVp5i3m8xws
-        2zI1r5dvgTxmlrG6iHYBjN97yZiO4xJQF+usKtrogaTZABPIPMmhyJyXNgddF8uMONDAgTJQtPUi
-        Y+aInczqEquzBrxNdtz4KWTpJz+d3U6q9Uj7H2S7MH5oyQuls1KpI9ToJuUcqGprfDPdF8RdUZGX
-        N6Cohx7rAtx2SD5QUceT1zQbhbJciION0mrKEN9YbhV4ZMUe1j57ls7b7Bte1DsxjgMAAA==
+        H4sIAAAAAAAC/y2LMQqAMAwA974iZBZxcHIWRwXRWYqN4mCLTYqI9O9WdLw77lYASN47jxXcCRLO
+        zlCisiizT+zErNfXYU9HIBYyQFY2ueDUDNYJLC5Yk+N/sGgJ/A5tN0xNN7Y1phJVVA+26ZsFcgAA
+        AA==
     headers:
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
@@ -35,7 +32,7 @@ interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Tue, 11 Apr 2023 16:10:39 GMT
+      - Tue, 11 Apr 2023 16:10:33 GMT
       Server:
       - ESF
       Transfer-Encoding:
@@ -51,6 +48,30 @@ interactions:
       X-XSS-Protection:
       - '0'
     status:
-      code: 200
-      message: OK
+      code: 404
+      message: Not Found
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - testserver
+      user-agent:
+      - testclient
+    method: GET
+    uri: http://testserver/receita/erro
+  response:
+    content: '{"detail":"FichaTecnica Not found"}'
+    headers:
+      content-length:
+      - '35'
+      content-type:
+      - application/json
+    http_version: HTTP/1.1
+    status_code: 404
 version: 1

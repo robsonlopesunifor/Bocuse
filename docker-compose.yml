@@ -5,9 +5,9 @@ x-build: &default-build
   dockerfile: Dockerfile
 
 services:
-  menu-app:
+  bocuse-app:
     build: *default-build
-    command: uvicorn Menu.main:app --host 0.0.0.0 --port 8000
+    command: uvicorn Bocuse.main:app --host 0.0.0.0 --port 8000
     volumes:
       - .:/app
     env_file:
@@ -20,7 +20,7 @@ services:
       - back
 
   lint:
-    container_name: menu-lint
+    container_name: bocuse-lint
     build: *default-build
     working_dir: /app
     volumes:
@@ -30,7 +30,7 @@ services:
     command: ["./scripts/start-lint.sh"]
 
   tests:
-    container_name: menu-tests
+    container_name: bocuse-tests
     build: *default-build
     env_file: .env
     working_dir: /app
@@ -40,5 +40,5 @@ services:
 
 networks:
   back:
-    name: back-menu
+    name: back-bocuse
 

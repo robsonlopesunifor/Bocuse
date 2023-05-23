@@ -4,8 +4,8 @@ import vcr
 
 import pandas as pd
 
-from Menu.core.google_api import GoogleDrive
-from Menu.core.google_api import GoogleSheet
+from Bocuse.core.google_api import GoogleDrive
+from Bocuse.core.google_api import GoogleSheet
 
 
 class TestGoogleDrive:
@@ -15,7 +15,7 @@ class TestGoogleDrive:
         assert "doces" in (folder["name"] for folder in list_sheets)
         assert "teste_bolo" in (receita["name"] for folder in list_sheets for receita in folder["receitas"])
 
-    @vcr.use_cassette("tests/fixtures/vcr_cassettes/search_ficha_tecnica.yml")
+    @vcr.use_cassette("tests/fixtures/vcr_cassettes/search_receita.yml")
     def test_searchFichaTecnica(self):
         assert (
             GoogleDrive("1WbimQ3P31IOYWv_zsCdnGaxsMF6be5J4").searchFichaTecnica("teste_bolo")

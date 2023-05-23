@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Project Folders
-TARGET_FOLDERS="Menu"
+TARGET_FOLDERS="Bocuse"
 MAX_ACCEPTABLE_COMPLEXITY=6
 
 # Run Tools

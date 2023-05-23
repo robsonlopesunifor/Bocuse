@@ -7,7 +7,7 @@ interactions:
       accept-encoding:
       - gzip, deflate
       authorization:
-      - Bearer ya29.a0Ael9sCOdxf06TkJyyAJbSPlawaysudGZTj23yZFbdTJF52afbjkmwI4vguXaD3dVRKU7g215U4hVJAo8Djr4zTiHNW8h_R4Qn9JYLa8gtEt7lhvuFmp4ULeC6wh8XAv7CImUbjM2xAl-qxnUUpXZLhEZICCG7L2XgQaCgYKAegSARASFQF4udJhzVhCCStr3eOTUx3tYp72bQ0169
+      - Bearer ya29.a0Ael9sCMOy-DE75vXWknAPs82PuHmaV1EpjQ7txX7meDzHxKZBcjFxy90fJ09aEbcSBGClI0dMmFCCjqMGg2F_6iyf4v-P-gEEBgx7jtYoJ-4XhwtWytUJNaKDwZOyB082-Kw3LiO4v7TuARA2yPb8nKZGJ6xUR6e5gaCgYKAcQSARASFQF4udJhOR2IGKPoxlXfSwLJto6Phg0169
       content-length:
       - '0'
       user-agent:
@@ -33,7 +33,7 @@ interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Tue, 04 Apr 2023 22:28:13 GMT
+      - Tue, 11 Apr 2023 16:10:37 GMT
       Expires:
       - Mon, 01 Jan 1990 00:00:00 GMT
       Pragma:
@@ -61,7 +61,7 @@ interactions:
       accept-encoding:
       - gzip, deflate
       authorization:
-      - Bearer ya29.a0Ael9sCOdxf06TkJyyAJbSPlawaysudGZTj23yZFbdTJF52afbjkmwI4vguXaD3dVRKU7g215U4hVJAo8Djr4zTiHNW8h_R4Qn9JYLa8gtEt7lhvuFmp4ULeC6wh8XAv7CImUbjM2xAl-qxnUUpXZLhEZICCG7L2XgQaCgYKAegSARASFQF4udJhzVhCCStr3eOTUx3tYp72bQ0169
+      - Bearer ya29.a0Ael9sCMOy-DE75vXWknAPs82PuHmaV1EpjQ7txX7meDzHxKZBcjFxy90fJ09aEbcSBGClI0dMmFCCjqMGg2F_6iyf4v-P-gEEBgx7jtYoJ-4XhwtWytUJNaKDwZOyB082-Kw3LiO4v7TuARA2yPb8nKZGJ6xUR6e5gaCgYKAcQSARASFQF4udJhOR2IGKPoxlXfSwLJto6Phg0169
       content-length:
       - '0'
       user-agent:
@@ -87,7 +87,7 @@ interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Tue, 04 Apr 2023 22:28:13 GMT
+      - Tue, 11 Apr 2023 16:10:38 GMT
       Expires:
       - Mon, 01 Jan 1990 00:00:00 GMT
       Pragma:
@@ -115,7 +115,7 @@ interactions:
       accept-encoding:
       - gzip, deflate
       authorization:
-      - Bearer ya29.a0Ael9sCOdxf06TkJyyAJbSPlawaysudGZTj23yZFbdTJF52afbjkmwI4vguXaD3dVRKU7g215U4hVJAo8Djr4zTiHNW8h_R4Qn9JYLa8gtEt7lhvuFmp4ULeC6wh8XAv7CImUbjM2xAl-qxnUUpXZLhEZICCG7L2XgQaCgYKAegSARASFQF4udJhzVhCCStr3eOTUx3tYp72bQ0169
+      - Bearer ya29.a0Ael9sCMOy-DE75vXWknAPs82PuHmaV1EpjQ7txX7meDzHxKZBcjFxy90fJ09aEbcSBGClI0dMmFCCjqMGg2F_6iyf4v-P-gEEBgx7jtYoJ-4XhwtWytUJNaKDwZOyB082-Kw3LiO4v7TuARA2yPb8nKZGJ6xUR6e5gaCgYKAcQSARASFQF4udJhOR2IGKPoxlXfSwLJto6Phg0169
       content-length:
       - '0'
       user-agent:
@@ -127,11 +127,11 @@ interactions:
   response:
     body:
       string: !!binary |
-        H4sIAAAAAAAC/6vmUlBQSsvMSS1WslKIBnIUFKrBJFA4MwUopmSYFODhY+BT7hroGxacauocEBlh
-        bOlqVORckBRUEJyVrxvh5VuZ7W2eW2lhoKQD05uXmJsK0l2SWlySGp+Un5OvBJaq1cFqR1ZpcVBR
-        iH+IUWBJUZZnmGGpYU5ZfoBZQWauT4mBZUmmWURWkKNTfIB3aiSmHckZqeWVCsn5+dmZqcUKeO3x
-        8SytzMt2Tskwjix1NPUqKDaMN/GOqijUNcn0zdQNyTN39Ko0Kc0xN/fJxrQnILHs8Cqo8UAylquW
-        CwCKG+DXPwEAAA==
+        H4sIAAAAAAAC/32NTW+CQBiE7/yKzZ4lAUWpvVFiUmFJVyQG2jRE9G1cvpayu9qN8b9LTXuy6WWS
+        mcnMczYQwh+sBoEf0dtgEDrfdIjZfsiwXdBnYpHTYhVt1jD1aZZO5otx73dF3K1LbqZBpKvQbfSD
+        hUe/23bbwPdagpCQF7zm+FZdRn8yyFLptvL3h0mmvGnQCTt3wtevT9NhETOT1vUC7ajadUl1z6Db
+        I/z7XioR98lLMl7JvlxubGXXR05nHWuItOaSzdIy9p5yGkJ2/747wEmjHecVA4F+OIO+GxfjCqhg
+        sj0+AQAA
     headers:
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
@@ -142,7 +142,7 @@ interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Tue, 04 Apr 2023 22:28:14 GMT
+      - Tue, 11 Apr 2023 16:10:38 GMT
       Expires:
       - Mon, 01 Jan 1990 00:00:00 GMT
       Pragma:
@@ -170,7 +170,7 @@ interactions:
       accept-encoding:
       - gzip, deflate
       authorization:
-      - Bearer ya29.a0Ael9sCOdxf06TkJyyAJbSPlawaysudGZTj23yZFbdTJF52afbjkmwI4vguXaD3dVRKU7g215U4hVJAo8Djr4zTiHNW8h_R4Qn9JYLa8gtEt7lhvuFmp4ULeC6wh8XAv7CImUbjM2xAl-qxnUUpXZLhEZICCG7L2XgQaCgYKAegSARASFQF4udJhzVhCCStr3eOTUx3tYp72bQ0169
+      - Bearer ya29.a0Ael9sCMOy-DE75vXWknAPs82PuHmaV1EpjQ7txX7meDzHxKZBcjFxy90fJ09aEbcSBGClI0dMmFCCjqMGg2F_6iyf4v-P-gEEBgx7jtYoJ-4XhwtWytUJNaKDwZOyB082-Kw3LiO4v7TuARA2yPb8nKZGJ6xUR6e5gaCgYKAcQSARASFQF4udJhOR2IGKPoxlXfSwLJto6Phg0169
       content-length:
       - '0'
       user-agent:
@@ -195,7 +195,7 @@ interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Tue, 04 Apr 2023 22:28:14 GMT
+      - Tue, 11 Apr 2023 16:10:38 GMT
       Expires:
       - Mon, 01 Jan 1990 00:00:00 GMT
       Pragma:
@@ -215,28 +215,4 @@ interactions:
     status:
       code: 200
       message: OK
-- request:
-    body: ''
-    headers:
-      accept:
-      - '*/*'
-      accept-encoding:
-      - gzip, deflate
-      connection:
-      - keep-alive
-      host:
-      - testserver
-      user-agent:
-      - testclient
-    method: GET
-    uri: http://testserver/ficha_tecnica/erro
-  response:
-    content: '{"detail":"Ficha Tecnica Not found"}'
-    headers:
-      content-length:
-      - '36'
-      content-type:
-      - application/json
-    http_version: HTTP/1.1
-    status_code: 404
 version: 1

@@ -1,8 +1,8 @@
-from Menu.core.google_api import GoogleSheet
+from Bocuse.core.google_api import GoogleSheet
 
 
 class FichaTecnica(GoogleSheet):
-    def fichaTecnica(self):
+    def receita(self):
         return {
             "equipamentos": self.equipamentos(),
             "ingredientes": self.ingredientes(),
@@ -37,19 +37,24 @@ class FichaTecnica(GoogleSheet):
     def equipamentos(self):
         data_frame = self.dataSheet("equipamentos")
         equipamentos = dict(data_frame.iloc[1:, 0:].values)
+        lista_equipamentos = []
         for key in equipamentos:
             equipamentos[key] = True if equipamentos[key] == "1" else False
-        return equipamentos
+            lista_equipamentos.append({"nome": key, "necessario": equipamentos[key]})
+        return lista_equipamentos
 
     def preparos(self):
-        etapa = []
-        preparos = []
         data_frame = self.dataSheet("preparos")
-        for _, row in data_frame.iterrows():
-            if row[0] == "etapa" and etapa:
-                preparos.append(etapa.copy())
-                etapa = []
-            if row[1]:
-                etapa.append((row[0], row[1]))
-        preparos.append(etapa.copy())
-        return preparos
+        preparos = data_frame.to_dict("records")
+        grupos_preparos = []
+        parte = {}
+        for index in range(len(preparos)):
+            etapa = preparos[index][0]
+            passo = preparos[index][1]
+            if etapa == "etapa":
+                parte = {"etapa": passo, "passos": []}
+            else:
+                parte["passos"].append({"descricao": passo, "tipo": etapa})
+            if len(preparos) == (index + 1) or preparos[index + 1][0] == "etapa":
+                grupos_preparos.append(parte)
+        return grupos_preparos

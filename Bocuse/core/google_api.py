@@ -12,21 +12,19 @@ SCOPES = [
     "https://www.googleapis.com/auth/drive",
 ]
 
-folder_menu_id = "1WbimQ3P31IOYWv_zsCdnGaxsMF6be5J4"
-
 
 class GoogleApi:
     def credencial(self):
         creds = None
-        if os.path.exists("Menu/core/token.json"):
-            creds = Credentials.from_authorized_user_file("Menu/core/token.json", SCOPES)
+        if os.path.exists("Bocuse/core/token.json"):
+            creds = Credentials.from_authorized_user_file("Bocuse/core/token.json", SCOPES)
         if not creds or not creds.valid:
             if creds and creds.expired and creds.refresh_token:
                 creds.refresh(Request())
             else:
-                flow = InstalledAppFlow.from_client_secrets_file("Menu/core/credentials.json", SCOPES)
+                flow = InstalledAppFlow.from_client_secrets_file("Bocuse/core/credentials.json", SCOPES)
                 creds = flow.run_local_server(port=0)
-            with open("Menu/core/token.json", "w") as token:
+            with open("Bocuse/core/token.json", "w") as token:
                 token.write(creds.to_json())
         return creds
 
@@ -79,7 +77,6 @@ class GoogleSheet(GoogleApi):
     def __init__(self, sheet_id: str):
         self.service = build("sheets", "v4", credentials=self.credencial())
         self.sheet_id = sheet_id
-        self.ficha_tecnica: dict = {}
 
     def dataSheet(self, range: str):
         sheet = self.service.spreadsheets()
