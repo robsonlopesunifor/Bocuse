@@ -7,3 +7,11 @@ repos:
         language: system
         types: [python]
         pass_filenames: false
+-   repo: local
+    hooks:
+      - id: tests
+        name: tests
+        entry: make test
+        language: system
+        types: [python]
+        pass_filenames: false
