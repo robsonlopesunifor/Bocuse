@@ -1,9 +1,10 @@
 import os
 import sys
 import vcr
+import pytest
 
 import pandas as pd
-
+from Bocuse.core.exceptions import NonExistentPageFault
 from Bocuse.core.google_api import GoogleDrive
 from Bocuse.core.google_api import GoogleSheet
 
@@ -29,6 +30,15 @@ class TestGoogleSheet:
         sheet = GoogleSheet("1bPHL0LwEQMVSe5CPYX39E2rCpbRpSjo-XJMykK7my80")
         data = sheet.dataSheet("ingredientes")
         assert isinstance(data, pd.DataFrame)
+
+    @vcr.use_cassette("tests/fixtures/vcr_cassettes/sheet_teste_fails_when_passing_non_existent_page_name.yml")
+    def test_dataSheet_fails_when_passing_non_existent_page_name(self):
+        sheet = GoogleSheet("1bPHL0LwEQMVSe5CPYX39E2rCpbRpSjo-XJMykK7my80")
+        with pytest.raises(NonExistentPageFault) as err:
+            data = sheet.dataSheet("nome_qualquer")
+        assert err.value.STATUS_CODE == 400
+        assert err.value.message["message"] == 'O nome do titulo da pagina do fichario não existe.'
+        assert err.value.message["error"] =="Unable to parse range: nome_qualquer"
 
     def test_binder(self):
         sheet = GoogleSheet("1bPHL0LwEQMVSe5CPYX39E2rCpbRpSjo-XJMykK7my80")

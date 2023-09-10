@@ -29,15 +29,6 @@ services:
       - back
     command: ["./scripts/start-lint.sh"]
 
-  tests:
-    container_name: bocuse-tests
-    build: *default-build
-    env_file: .env
-    working_dir: /app
-    volumes:
-      - .:/app
-    command: ["pytest","tests"]
-
 networks:
   back:
     name: back-bocuse

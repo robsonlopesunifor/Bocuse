@@ -6,6 +6,10 @@ from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
+from googleapiclient.errors import HttpError as GoogleHttpError
+
+from Bocuse.core.exceptions import NonExistentPageFault
+from Bocuse.core.utils import return_message_error
 
 SCOPES = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -79,9 +83,13 @@ class GoogleSheet(GoogleApi):
         self.sheet_id = sheet_id
 
     def dataSheet(self, range: str):
-        sheet = self.service.spreadsheets()
-        result = sheet.values().get(spreadsheetId=self.sheet_id, range=range).execute()
-        return pd.DataFrame(result.get("values", []))
+        try:
+            sheet = self.service.spreadsheets()
+            result = sheet.values().get(spreadsheetId=self.sheet_id, range=range).execute()
+            return pd.DataFrame(result.get("values", []))
+        except GoogleHttpError as error:
+            message_erro = return_message_error(error.content)
+            raise NonExistentPageFault(message_erro)
 
     def binder(self):
         sheet = self.service.spreadsheets()
