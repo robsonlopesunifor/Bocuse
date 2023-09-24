@@ -9,7 +9,7 @@ from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError as GoogleHttpError
 
 from Bocuse.core.exceptions import NonExistentPageFault
-from Bocuse.core.utils import return_message_error
+from Bocuse.core.utils import returnMessageError
 
 SCOPES = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -88,7 +88,7 @@ class GoogleSheet(GoogleApi):
             result = sheet.values().get(spreadsheetId=self.sheet_id, range=range).execute()
             return pd.DataFrame(result.get("values", []))
         except GoogleHttpError as error:
-            message_erro = return_message_error(error.content)
+            message_erro = returnMessageError(error.content)
             raise NonExistentPageFault(message_erro)
 
     def binder(self):
