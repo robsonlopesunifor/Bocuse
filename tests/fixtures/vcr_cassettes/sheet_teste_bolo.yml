@@ -7,13 +7,13 @@ interactions:
       accept-encoding:
       - gzip, deflate
       authorization:
-      - Bearer ya29.a0Ael9sCMOy-DE75vXWknAPs82PuHmaV1EpjQ7txX7meDzHxKZBcjFxy90fJ09aEbcSBGClI0dMmFCCjqMGg2F_6iyf4v-P-gEEBgx7jtYoJ-4XhwtWytUJNaKDwZOyB082-Kw3LiO4v7TuARA2yPb8nKZGJ6xUR6e5gaCgYKAcQSARASFQF4udJhOR2IGKPoxlXfSwLJto6Phg0169
+      - Bearer ya29.a0AWY7Cknw4IlgZVWltw45Okpo41SmTPFHkD0r3DAb4HRzdvCqGmW8lai4wau1SxdNeSA6Q5er_l__WMuFLB214BkjgVXC4W5A7abIyExdPty9OuiAXOPjMFDdGS2oa8tCAQFSHUH4ISYWMdQiqxB18vnzf4imWhTZWgaCgYKAboSARASFQG1tDrpB9liHSbGQjbBGzpL2-w7BQ0169
       content-length:
       - '0'
       user-agent:
       - (gzip)
       x-goog-api-client:
-      - gdcl/2.81.0 gl-python/3.10.10
+      - gdcl/2.81.0 gl-python/3.10.11
     method: GET
     uri: https://sheets.googleapis.com/v4/spreadsheets/1bPHL0LwEQMVSe5CPYX39E2rCpbRpSjo-XJMykK7my80/values/ingredientes?alt=json
   response:
@@ -35,7 +35,7 @@ interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Tue, 11 Apr 2023 16:10:39 GMT
+      - Sun, 28 May 2023 14:53:24 GMT
       Server:
       - ESF
       Transfer-Encoding:

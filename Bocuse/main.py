@@ -24,12 +24,16 @@ def cardapios():
 
 @app.get("/receita/{sheed_id}")
 def receita(sheed_id: str):
+    """
     try:
-        status_code = status.HTTP_200_OK
-        receita = FichaTecnica(sheed_id).receita()
-        response = jsonable_encoder(receita)
-        return JSONResponse(content=response, status_code=status_code)
-    except Exception:
+    """
+    status_code = status.HTTP_200_OK
+    receita = FichaTecnica(sheed_id).receita()
+    response = jsonable_encoder(receita)
+    return JSONResponse(content=response, status_code=status_code)
+    """
+    except Exception :
         status_code = status.HTTP_404_NOT_FOUND
         response = jsonable_encoder({"detail": "FichaTecnica Not found"})
         return JSONResponse(content=response, status_code=status_code)
+    """

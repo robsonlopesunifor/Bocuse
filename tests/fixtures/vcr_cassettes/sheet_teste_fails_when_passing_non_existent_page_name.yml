@@ -1,0 +1,111 @@
+interactions:
+- request:
+    body: grant_type=refresh_token&client_id=346366055472-0029e1kegfkpbtkdl1kqmtqt2jp74imi.apps.googleusercontent.com&client_secret=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&refresh_token=1%2F%2F0hyMhPEgHLIBYCgYIARAAGBESNwF-L9Ir3wMaqwnisd-eGMXWgkoDTCitX1sW1Ruawbz_yzRZAqEOD2RafemfEG8rwWdteOT_FKM&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fspreadsheets+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fdrive
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '388'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - python-requests/2.28.2
+    method: POST
+    uri: https://oauth2.googleapis.com/token
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAC/4WQy26CQABF936FYV1FUHm4Gx7aCrU8IggbMo4TQATGmamATf+9UT+g25uTnJz7
+        MxqPBYgQZizjbYUbYTUWBijrUzgDcaKaVV0hB1y12/lQQp+8E3rUPSQds7MT7rgS1Wt83ZhDP9kF
+        xFv026LNr1YWOXKFLou45y6suQRjea+6/BB/mnpjbRrZn6RpcEK9ammzbThnSAmSIFq49TqypbrR
+        jGGeAk8qbSP30htXt61a5YkSFF/J/dLHme26vDMANPPEAXsWggCEa38jcYsSzS+X0j6M4YcNmuie
+        gJbWn/5MUnTh7VGLe1JSzLLy0Tpf6vpzZagl+BFfcE7YShS7rpvmbZtfMCQlm6K2FuE3L8QTLW94
+        /B/FCMXwxAqMOXtpn+9mfHhZDAwppsLo9w9g/sTxgQEAAA==
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 28 May 2023 16:01:53 GMT
+      Expires:
+      - Mon, 01 Jan 1990 00:00:00 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - scaffolding on HTTPServer2
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-XSS-Protection:
+      - '0'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate
+      authorization:
+      - Bearer ya29.a0AWY7CkmkcKAq8vjXiaQpHprb9Pc1b_jKSNt6VmFeqGCyx-NRpP4xJhogqD_VK2kcl4WxtLamt1aW2U7LtXWMC9nDGn2Q-ZZRdcx7D80JS3sc6RYRV4LmFVE1mn8By3ZAP1iEBgPZvt7Jo7kgY6RhOYzlxW_ELLtwBAaCgYKAUsSARASFQG1tDrp8Qi51USWaIEAnVzYAormMQ0169
+      content-length:
+      - '0'
+      user-agent:
+      - (gzip)
+      x-goog-api-client:
+      - gdcl/2.81.0 gl-python/3.10.11
+    method: GET
+    uri: https://sheets.googleapis.com/v4/spreadsheets/1bPHL0LwEQMVSe5CPYX39E2rCpbRpSjo-XJMykK7my80/values/nome_qualquer?alt=json
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAC/6vmUlBQSi0qyi9SslKoBnKA3OT8lFQgz8TAQAcikJtaXJyYDhJTCs1LTMpJVSjJ
+        VyhILCpOVShKzEtPtVLIy89NjS8sTcwpLE0tUoJqKy5JLCktBuny9Atz9PF0iXcMcg/1dfULUQIq
+        qOWq5QIAipS10n4AAAA=
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Cache-Control:
+      - private
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Sun, 28 May 2023 16:01:54 GMT
+      Server:
+      - ESF
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-XSS-Protection:
+      - '0'
+    status:
+      code: 400
+      message: Bad Request
+version: 1
